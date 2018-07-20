@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Formatters;
+using LamarDI.Formatters;
 using Lamar;
 using LamarDI.Controllers;
 using Microsoft.AspNetCore.Builder;

@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DTOs;
-using Formatters;
+using LamarDI.DTOs;
+using LamarDI.Formatters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LamarDI.Controllers

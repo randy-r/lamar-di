@@ -1,4 +1,4 @@
-namespace Formatters
+namespace LamarDI.Formatters
 {
     public class BasicFormatter : IFormatter
     {
