@@ -19,7 +19,7 @@ namespace LamarDI.Controllers
             new Student {FirstName="Scott", LastName="Summers"},
         };
 
-        public StudentsController(IFormatter formatter, IFormatterB fancyFormatter)
+        public StudentsController(IFormatter formatter, IFormatter fancyFormatter)
         {
             this.formatter = formatter;
             this.fancyFormatter = fancyFormatter;

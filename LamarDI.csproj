@@ -9,6 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Lamar" Version="1.1.1" />
+    <PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
