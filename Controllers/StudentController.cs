@@ -13,20 +13,27 @@ namespace LamarDI.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IFormatter formatter;
+        private readonly IFormatter fancyFormatter;
         private List<Student> students = new List<Student>{
             new Student {FirstName="Jean", LastName="Grey"},
             new Student {FirstName="Scott", LastName="Summers"},
         };
 
-        public StudentsController(IFormatter formatter)
+        public StudentsController(IFormatter formatter, IFormatter fancyFormatter)
         {
             this.formatter = formatter;
+            this.fancyFormatter = fancyFormatter;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get([FromQuery] bool fancy)
         {
-            return Ok(students.Select(s => formatter.Format(s.FirstName, s.LastName)));
+            IFormatter formatterToUse = this.formatter;
+            if (fancy == true)
+            {
+                formatterToUse = this.fancyFormatter;
+            }
+            return Ok(students.Select(s => formatterToUse.Format(s.FirstName, s.LastName)));
         }
     }
 }
