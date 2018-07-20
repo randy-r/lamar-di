@@ -45,6 +45,12 @@ namespace LamarDI
                     .Transient()
                     .Ctor<IFormatter>("fancyFormatter").Is<FancyFormatter>()
                     .Transient();
+
+            services
+                .ForConcreteType<ProfessorsController>().Configure
+                .Scoped()
+                    .Ctor<IFormatter>().Is<FancyFormatter>()
+                    .Transient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
