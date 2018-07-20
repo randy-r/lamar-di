@@ -28,7 +28,8 @@ namespace LamarDI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddTransient<IFormatter, FancyFormatter>();
+            services.AddTransient<IFormatter, BasicFormatter>();
+            services.AddTransient<IFormatterB, FancyFormatter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

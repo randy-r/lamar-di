@@ -1,6 +1,6 @@
 namespace Formatters
 {
-    public class FancyFormatter : IFormatter
+    public class FancyFormatter : IFormatterB
     {
         public string Format(string firstName, string lastName)
         {
